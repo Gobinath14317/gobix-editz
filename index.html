@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GobiX Editz | AMV Editing & YouTube Shorts Editor</title><meta name="description" content="Professional AMV editing, reels, YouTube shorts and thumbnail design services at affordable price. GobiX Editz.">
+<meta name="keywords" content="amv editing presets, overlays, video editor india, youtube shorts editing, anime edits, thumbnail design"><style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: #050505;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+}
+nav a {
+    color: cyan;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1 {
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    from { text-shadow: 0 0 10px cyan; }
+    to { text-shadow: 0 0 30px cyan, 0 0 60px cyan; }
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+.card {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    width: 260px;
+    border-radius: 15px;
+    border: 1px solid cyan;
+    box-shadow: 0 0 15px cyan;
+    text-align: center;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px cyan;
+}
+
+button {
+    background: transparent;
+    color: cyan;
+    border: 1px solid cyan;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 20px cyan;
+}
+
+.gallery {
+    text-align: center;
+    padding: 40px;
+}
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.gallery-grid img, iframe {
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid cyan;
+    box-shadow: 0 0 10px cyan;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+}
+.modal-content {
+    display: block;
+    margin: 60px auto;
+    max-width: 90%;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.payment {
+    text-align: center;
+    padding: 50px;
+    border-top: 1px solid cyan;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid cyan;
+}
+</style></head><body><header>⚡ GobiX Editz ⚡</header><nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#payment">Payment</a>
+<br><br>
+<a href="https://youtube.com/@gobix_editz?si=FKuZHW0pQVxdJ2AR" target="_blank">🎬 YouTube</a>
+<a href="https://www.instagram.com/gobix_editz_173?igsh=MWZ2OHNraXh5NnRocg==" target="_blank">📸 Instagram</a>
+</nav><section class="hero">
+<h1>Best AMV Editing Service in India</h1>
+<p>AMV • Reels • Shorts • Thumbnails</p>
+</section><section class="services" id="services">
+<div class="card">
+<h3>AMV Edit Presets</h3>
+<p>High quality cinematic edits</p>
+<button onclick="orderNow('AMV Edit Presets','99')">₹99</button>
+</div><div class="card">
+<h3>Overlays</h3>
+<p>Viral trending edits</p>
+<button onclick="orderNow('Overlays','49')">₹49</button>
+</div><div class="card">
+<h3>Thumbnail Design</h3>
+<p>Click-worthy thumbnails</p>
+<button onclick="orderNow('Thumbnail','29')">₹29</button>
+</div>
+</section><section class="gallery" id="gallery">
+<h2>My Edits 🎥</h2><div class="gallery-grid"><img src="edit1.jpg" onclick="openImage(this.src)"><iframe src="https://www.youtube.com/embed/IKpgEgmz9mrIeTtK"
+frameborder="0" allowfullscreen></iframe></div>
+</section><div id="modal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img id="modalImg" class="modal-content">
+</div><section class="payment" id="payment">
+<h2>Pay via UPI</h2>
+<p>UPI ID: <b>gobidhanush182@okaxis</b></p><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=gobidhanush182@okaxis&pn=GobiXEditz"><br><br>
+
+<button onclick="payNow()">Pay Now</button>
+
+<br><br>
+
+<button class="whatsapp" onclick="contactWhatsApp()">Send Payment Screenshot</button>
+
+</section><section style="text-align:center; padding:40px;">
+<h2>Follow Me 🔥</h2><a href="https://youtube.com/@gobix_editz?si=aGuZ-_b-PstFg6bM" target="_blank">
+<button>Subscribe on YouTube</button>
+</a><br><br>
+
+<a href="https://www.instagram.com/gobix_editz_173?igsh=MWZ2OHNraXh5NnRocg==" target="_blank">
+<button>Follow on Instagram</button>
+</a>
+</section><footer>
+<p>© 2026 GobiX Editz</p>
+</footer><script>
+let selectedService="", selectedPrice="";
+
+function orderNow(service, price){
+    selectedService=service;
+    selectedPrice=price;
+    document.getElementById("payment").scrollIntoView({behavior:"smooth"});
+}
+
+function payNow(){
+    let upi="upi://pay?pa=gobidhanush182@okaxis&pn=GobiXEditz&am="+selectedPrice+"&cu=INR";
+    window.location.href=upi;
+}
+
+function contactWhatsApp(){
+    let msg="Hello, I ordered "+selectedService+" (₹"+selectedPrice+"). Here is my payment screenshot.";
+    window.open("https://wa.me/916374588996?text="+encodeURIComponent(msg));
+}
+
+function openImage(src){
+    document.getElementById("modal").style.display="block";
+    document.getElementById("modalImg").src=src;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+</script></body>
+</html>
