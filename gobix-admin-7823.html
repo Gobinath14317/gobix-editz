@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - GobiX Editz</title>
+
+<style>
+body{
+    background:#050505;
+    color:white;
+    font-family: Arial;
+    text-align:center;
+    padding:50px;
+}
+input{
+    padding:10px;
+    margin:10px;
+}
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox">
+  <h2>🔐 Admin Login</h2>
+  <input type="text" id="user" placeholder="Username"><br>
+  <input type="password" id="pass" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none;">
+  <h2>📊 Admin Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+
+  <h3>Add Order</h3>
+  <input type="text" id="name" placeholder="Customer Name">
+  <input type="text" id="work" placeholder="Work Type">
+  <button onclick="addOrder()">Add</button>
+
+  <h3>Orders</h3>
+  <ul id="orders"></ul>
+</div>
+
+<script>
+// CHANGE LOGIN HERE
+const USER = "KRISHNA";
+
+// password = 2023 (hashed)
+const PASS_HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
+
+// HASH FUNCTION
+async function hash(text){
+    const buf = new TextEncoder().encode(text);
+    const hash = await crypto.subtle.digest("SHA-256", buf);
+    return Array.from(new Uint8Array(hash))
+    .map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+
+// LOGIN
+async function login(){
+    let u = user.value;
+    let p = pass.value;
+    let h = await hash(p);
+
+    if(u===USER && h===PASS_HASH){
+        sessionStorage.setItem("admin","yes");
+        showDashboard();
+    } else {
+        error.innerText="Wrong login!";
+    }
+}
+
+// SHOW DASHBOARD
+function showDashboard(){
+    loginBox.style.display="none";
+    dashboard.style.display="block";
+    loadOrders();
+}
+
+// AUTO LOGIN
+if(sessionStorage.getItem("admin")==="yes"){
+    showDashboard();
+}
+
+// LOGOUT
+function logout(){
+    sessionStorage.clear();
+    location.reload();
+}
+
+// ORDER SYSTEM (LOCAL STORAGE)
+function addOrder(){
+    let n = name.value;
+    let w = work.value;
+
+    if(!n || !w) return;
+
+    let data = JSON.parse(localStorage.getItem("orders")) || [];
+    data.push({n,w});
+    localStorage.setItem("orders", JSON.stringify(data));
+
+    loadOrders();
+}
+
+// LOAD ORDERS
+function loadOrders(){
+    let data = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.innerHTML="";
+
+    data.forEach((o,i)=>{
+        orders.innerHTML += `<li>${o.n} - ${o.w} 
+        <button onclick="del(${i})">❌</button></li>`;
+    });
+}
+
+// DELETE
+function del(i){
+    let data = JSON.parse(localStorage.getItem("orders"));
+    data.splice(i,1);
+    localStorage.setItem("orders", JSON.stringify(data));
+    loadOrders();
+}
+</script>
+
+</body>
+</html>
