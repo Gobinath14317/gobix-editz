@@ -40,6 +40,32 @@
     footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.socials{display:flex;gap:18px}.socials a:hover{color:var(--cyan)}
     @media(max-width:800px){.hero{grid-template-columns:1fr;padding:66px 0 48px;gap:28px}.grid{grid-template-columns:1fr 1fr}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 4%;background:#080e17;border-bottom:1px solid var(--line);flex-direction:column;gap:14px}.navlinks.open{display:flex}.menu{display:block}}
     @media(max-width:560px){section{padding:58px 0}.grid,.gallery{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.visual{height:190px}h1{font-size:2.65rem}}
+    
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.project {
+  background: #07131c;
+  border: 1px solid #00eaff55;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00eaff18;
+}
+
+.project iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+.project h3 {
+  color: #00eaff;
+  padding: 14px;
+  margin: 0;                                                                                                                       
   </style>
 </head>
 <body>
@@ -83,17 +109,51 @@
     </div>
   </section>
 
-  <section id="work">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Selected work</div><h2>MY PORTFOLIO</h2><p>Replace these sample placeholders with your own finished edits or video links before sharing this page with clients.</p></div>
-      <div class="grid gallery">
-        <article class="card project"><div class="thumb">AMV / ANIME EDIT</div><div class="project-body"><h3>Anime AMV Showcase</h3><p>Character-focused edit with rhythm, effects and cinematic pacing.</p><span class="tag">Sample slot 01</span></div></article>
-        <article class="card project"><div class="thumb">PHONK / BEAT SYNC</div><div class="project-body"><h3>Phonk Edit</h3><p>Fast cuts, beat sync and motion effects.</p><span class="tag">Sample slot 02</span></div></article>
-        <article class="card project"><div class="thumb">REELS / SHORTS</div><div class="project-body"><h3>Social Media Short</h3><p>Vertical short-form edit with captions and clean transitions.</p><span class="tag">Sample slot 03</span></div></article>
-        <article class="card project"><div class="thumb">GAMING / HIGHLIGHTS</div><div class="project-body"><h3>Gaming Montage</h3><p>Gameplay highlights assembled into a punchy montage.</p><span class="tag">Sample slot 04</span></div></article>
-      </div>
+  
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">GOBIX EDITZ</div>
+      <h2>MY VIDEO GALLERY</h2>
+      <p>Anime AMV • Phonk • Cinematic Edits</p>
     </div>
-  </section>
+
+    <div class="gallery">
+
+      <div class="project">
+        <iframe
+          src="https://www.youtube.com/embed/7D6uLtU4Lk4"
+          title="GobiX Editz Video 1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <h3>Anime AMV Edit 01</h3>
+      </div>
+
+      <div class="project">
+        <iframe
+          src="https://www.youtube.com/embed/1nx9n25f6-k"
+          title="GobiX Editz Video 2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <h3>Anime AMV Edit 02</h3>
+      </div>
+
+      <div class="project">
+        <iframe
+          src="https://www.youtube.com/embed/J-HTGnv06zw"
+          title="GobiX Editz Video 3"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen loading="lazy">
+        </iframe>
+        <h3>Anime AMV Edit 03</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
 
   <section id="pricing" class="pricing">
     <div class="wrap">
