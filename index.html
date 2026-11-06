@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b12">
+  <meta name="description" content="GobiX Editz — short-form video editing, anime AMVs, gaming edits, reels and promotional videos.">
+  <title>GobiX Editz | Video Editing Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#070b12;--panel:#0d1521;--panel2:#101d2b;--cyan:#43e8ff;--cyan2:#00bcd4;--text:#eefaff;--muted:#9bb0bf;--line:rgba(67,232,255,.19);--glow:0 0 28px rgba(67,232,255,.14)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(0,188,212,.12),transparent 34%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,11,18,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Orbitron,sans-serif;font-weight:800;letter-spacing:1px;color:var(--cyan);font-size:1.1rem;text-shadow:0 0 16px rgba(67,232,255,.35)}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--cyan)} .menu{display:none;background:none;border:1px solid var(--line);color:var(--cyan);padding:8px 12px;border-radius:9px}
+    .hero{padding:92px 0 76px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:44px;min-height:570px}
+    .eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+    h1,h2,h3{line-height:1.15} h1{font:800 clamp(2.7rem,7vw,5.5rem)/1.05 Orbitron,sans-serif;margin:18px 0} h1 span{color:var(--cyan);text-shadow:0 0 28px rgba(67,232,255,.25)}
+    .lead{color:var(--muted);font-size:1.08rem;max-width:590px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:10px;font-weight:700;border:1px solid var(--cyan);transition:.2s}
+    .primary{background:var(--cyan);color:#041016;box-shadow:0 0 24px rgba(67,232,255,.18)}.secondary{color:var(--cyan);background:transparent}.btn:hover{transform:translateY(-2px);box-shadow:var(--glow)}
+    .hero-card{border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(145deg,rgba(16,29,43,.96),rgba(8,15,24,.96));box-shadow:var(--glow);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(67,232,255,.12);filter:blur(65px);right:-80px;top:-80px}
+    .visual{height:245px;border:1px solid rgba(67,232,255,.25);border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#0b1a28,#101c30 55%,#09212a);position:relative;overflow:hidden}
+    .visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(67,232,255,.22);width:240px;height:240px;transform:rotate(45deg)}.visual:after{width:170px;height:170px}
+    .play{z-index:1;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:rgba(67,232,255,.13);border:1px solid var(--cyan);color:var(--cyan);font-size:1.6rem;box-shadow:0 0 30px rgba(67,232,255,.25)}
+    .mini-label{font:700 .75rem Orbitron,sans-serif;letter-spacing:2px;color:var(--cyan);text-align:center;margin-top:18px}
+    section{padding:76px 0}.section-head{margin-bottom:30px}.section-head h2{font:700 clamp(1.8rem,4vw,2.6rem) Orbitron,sans-serif;margin:10px 0}.section-head p{color:var(--muted);max-width:650px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel),#0a111b);border:1px solid var(--line);border-radius:17px;padding:23px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:rgba(67,232,255,.55);box-shadow:var(--glow)}
+    .icon{font-size:1.6rem}.card h3{font-size:1.08rem;margin:13px 0 8px}.card p{color:var(--muted);font-size:.93rem;margin:0}
+    .gallery{grid-template-columns:repeat(2,1fr)}.project{padding:0;overflow:hidden}.thumb{min-height:190px;display:grid;place-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#10283a,#101629 60%,#07313a);border-bottom:1px solid var(--line);color:var(--cyan);font:700 1rem Orbitron,sans-serif;letter-spacing:1px}
+    .project-body{padding:20px}.project-body p{margin:7px 0 0}.tag{display:inline-block;color:var(--cyan);border:1px solid var(--line);border-radius:100px;padding:4px 9px;font-size:.72rem;margin-top:12px}
+    .pricing .price{font:700 2rem Orbitron,sans-serif;color:var(--cyan);margin:14px 0}.pricing ul{padding-left:18px;color:var(--muted);font-size:.92rem;min-height:105px}.pricing .card{display:flex;flex-direction:column}.pricing .btn{margin-top:auto}
+    .note{font-size:.8rem;color:var(--muted);margin-top:16px}
+    .contact{background:linear-gradient(145deg,rgba(11,29,42,.8),rgba(7,11,18,.7));border:1px solid var(--line);border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .contact h2{font:700 clamp(1.5rem,4vw,2.3rem) Orbitron,sans-serif;margin:0 0 10px}.contact p{color:var(--muted);margin:0;max-width:600px}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.socials{display:flex;gap:18px}.socials a:hover{color:var(--cyan)}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:66px 0 48px;gap:28px}.grid{grid-template-columns:1fr 1fr}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 4%;background:#080e17;border-bottom:1px solid var(--line);flex-direction:column;gap:14px}.navlinks.open{display:flex}.menu{display:block}}
+    @media(max-width:560px){section{padding:58px 0}.grid,.gallery{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.visual{height:190px}h1{font-size:2.65rem}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">GOBIX EDITZ</a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation">MENU</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#services">Services</a><a href="#work">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Video editing • Salem, India</div>
+      <h1>MAKE YOUR<br><span>CONTENT</span><br>STAND OUT.</h1>
+      <p class="lead">GobiX Editz creates engaging short-form videos, anime AMVs, gaming edits and promotional content with clean cuts, creative effects and beat sync.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">View my work</a>
+        <a class="btn secondary" href="#contact">Request an edit</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="visual"><div class="play">▶</div></div>
+      <div class="mini-label">YOUR VISION. OUR EDIT.</div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What I do</div><h2>EDITING SERVICES</h2><p>Short-form content and creative edits for creators, gaming channels and small businesses.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">⚡</div><h3>Anime AMV & Phonk</h3><p>Beat-synced edits, transitions, motion effects and cinematic colour treatment.</p></article>
+        <article class="card"><div class="icon">📱</div><h3>Reels & Shorts</h3><p>Vertical videos with clean cuts, captions, music sync and engaging pacing.</p></article>
+        <article class="card"><div class="icon">🎮</div><h3>Gaming Edits</h3><p>Gameplay highlights, montages, effects and creator intro/outro videos.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Intro Animations</h3><p>Logo reveals, animated titles and channel identity videos.</p></article>
+        <article class="card"><div class="icon">📣</div><h3>Promo Videos</h3><p>Short promotional edits for products, services and social pages.</p></article>
+        <article class="card"><div class="icon">🖼️</div><h3>Thumbnails & Posters</h3><p>Simple visual assets to support your videos and social media posts.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Selected work</div><h2>MY PORTFOLIO</h2><p>Replace these sample placeholders with your own finished edits or video links before sharing this page with clients.</p></div>
+      <div class="grid gallery">
+        <article class="card project"><div class="thumb">AMV / ANIME EDIT</div><div class="project-body"><h3>Anime AMV Showcase</h3><p>Character-focused edit with rhythm, effects and cinematic pacing.</p><span class="tag">Sample slot 01</span></div></article>
+        <article class="card project"><div class="thumb">PHONK / BEAT SYNC</div><div class="project-body"><h3>Phonk Edit</h3><p>Fast cuts, beat sync and motion effects.</p><span class="tag">Sample slot 02</span></div></article>
+        <article class="card project"><div class="thumb">REELS / SHORTS</div><div class="project-body"><h3>Social Media Short</h3><p>Vertical short-form edit with captions and clean transitions.</p><span class="tag">Sample slot 03</span></div></article>
+        <article class="card project"><div class="thumb">GAMING / HIGHLIGHTS</div><div class="project-body"><h3>Gaming Montage</h3><p>Gameplay highlights assembled into a punchy montage.</p><span class="tag">Sample slot 04</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Simple starting rates</div><h2>PRICING</h2><p>Introductory estimates. Final pricing depends on video length, footage, complexity and delivery time.</p></div>
+      <div class="grid">
+        <article class="card"><h3>STARTER</h3><div class="price">₹150</div><ul><li>One short video</li><li>Basic cuts and transitions</li><li>One revision</li></ul><a class="btn secondary" href="#contact">Ask about Starter</a></article>
+        <article class="card"><h3>CREATOR</h3><div class="price">₹400</div><ul><li>Three short videos</li><li>Captions and music sync</li><li>One revision per video</li></ul><a class="btn primary" href="#contact">Ask about Creator</a></article>
+        <article class="card"><h3>CUSTOM</h3><div class="price">Let's talk</div><ul><li>AMV or gaming edits</li><li>Promotional videos</li><li>Custom length and effects</li></ul><a class="btn secondary" href="#contact">Request a quote</a></article>
+      </div>
+      <p class="note">Prices are starting estimates, not fixed quotes. Confirm scope, deadline, revisions and payment arrangements with a parent or guardian before accepting paid work.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div><div class="eyebrow">Let's work together</div><h2>HAVE A VIDEO IDEA?</h2><p>Send a message on Instagram with your video type, length and deadline. I'll discuss the project and confirm a quote before work begins.</p></div>
+        <a class="btn primary" href="https://www.instagram.com/gobix_editz_173/" target="_blank" rel="noopener">Contact on Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><div>© <span id="year"></span> GobiX Editz. All rights reserved.</div><div class="socials"><a href="https://www.youtube.com/@gobix_editz" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/gobix_editz_173/" target="_blank" rel="noopener">Instagram</a><a href="https://github.com/Gobinath14317" target="_blank" rel="noopener">GitHub</a></div></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn'), links=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
